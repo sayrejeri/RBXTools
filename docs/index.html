@@ -4,18 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RBXTools</title>
-  <meta name="description" content="Open-source Roblox account management tools. Runs locally. Download the Windows EXE from Releases." />
+  <meta name="description" content="Open-source Roblox account management tools. Runs locally. Download the Windows EXE from GitHub Releases." />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Simple favicon (emoji) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧰</text></svg>">
 </head>
+
 <body>
   <header class="hero">
     <div class="wrap">
       <h1>RBXTools</h1>
       <p class="subtitle">Open-source Roblox account management tools</p>
 
+      <div class="badges">
+        <span class="pill">Current version: <strong>v1.0.0</strong></span>
+        <span class="pill muted">Runs locally • No data collection</span>
+      </div>
+
       <div class="cta">
         <a class="btn" href="https://github.com/sayrejeri/RBXTools/releases/latest" target="_blank" rel="noreferrer">
-          Download Windows EXE
+          Download Windows EXE (Latest Release)
         </a>
         <a class="btn secondary" href="https://github.com/sayrejeri/RBXTools" target="_blank" rel="noreferrer">
           View Source
@@ -23,7 +32,7 @@
       </div>
 
       <p class="small">
-        Runs locally on your PC. No data collection. Not affiliated with Roblox.
+        Not affiliated with Roblox. Use responsibly and at your own risk.
       </p>
     </div>
   </header>
@@ -45,21 +54,43 @@
         RBXTools uses your Roblox session cookie (<code>.ROBLOSECURITY</code>) to authenticate requests.
         <strong>Never share it</strong> or paste it into random websites.
       </p>
-      <ul>
-        <li>✅ Tool runs locally only</li>
-        <li>❌ We do not collect or store cookies</li>
-        <li>✅ After use, log out of Roblox to invalidate the cookie</li>
+      <p class="muted">
+        Your cookie is used only on your computer by this tool and is never sent anywhere except to Roblox endpoints.
+      </p>
+      <ul class="checks">
+        <li><span class="ok">✅</span> Tool runs locally only</li>
+        <li><span class="no">❌</span> We do not collect or store cookies</li>
+        <li><span class="ok">✅</span> After use, log out of Roblox to invalidate the cookie</li>
       </ul>
     </section>
 
     <section class="card">
       <h2>How to use</h2>
       <ol>
-        <li>Download the EXE from Releases.</li>
+        <li>Download the EXE from GitHub Releases.</li>
         <li>Run it and follow the prompts.</li>
         <li>It will generate a local log file of unfollows.</li>
         <li>Log out of Roblox afterwards for security.</li>
       </ol>
+
+      <div class="tip">
+        <strong>Tip:</strong> If Windows SmartScreen shows a warning, click
+        <em>More info</em> → <em>Run anyway</em>.
+        (This is common for new unsigned apps.)
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>FAQ</h2>
+
+      <p><strong>Does this run on Mac or Linux?</strong><br />
+        The downloadable EXE is for Windows. Advanced users can run the Python script from source.</p>
+
+      <p><strong>Why do I need a cookie?</strong><br />
+        Roblox requires authentication to unfollow accounts. The cookie is how the tool proves it’s you, using your logged-in browser session.</p>
+
+      <p><strong>Will this get my account banned?</strong><br />
+        There’s always some risk when automating actions. This tool uses delays and rate-limit handling, but you should use it responsibly.</p>
     </section>
 
     <section class="card">
@@ -74,15 +105,15 @@
     <section class="card">
       <h2>Disclaimer</h2>
       <p>
-        RBXTools is not affiliated with Roblox Corporation. Use at your own risk and in accordance
-        with Roblox’s Terms of Service.
+        RBXTools is not affiliated with Roblox Corporation. Use at your own risk and in accordance with Roblox’s Terms of Service.
       </p>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap">
+    <div class="wrap footer-row">
       <span>© 2025 RBXTools · MIT Licensed</span>
+      <span class="muted">Not affiliated with Roblox</span>
     </div>
   </footer>
 </body>
