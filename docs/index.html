@@ -2,80 +2,88 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RBXTools</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="Open-source Roblox account management tools. Runs locally. Download the Windows EXE from Releases." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>RBXTools</h1>
+      <p class="subtitle">Open-source Roblox account management tools</p>
 
-<header>
-  <h1>RBXTools</h1>
-  <p>Open-source Roblox account management tools</p>
-</header>
+      <div class="cta">
+        <a class="btn" href="https://github.com/sayrejeri/RBXTools/releases/latest" target="_blank" rel="noreferrer">
+          Download Windows EXE
+        </a>
+        <a class="btn secondary" href="https://github.com/sayrejeri/RBXTools" target="_blank" rel="noreferrer">
+          View Source
+        </a>
+      </div>
 
-<main>
+      <p class="small">
+        Runs locally on your PC. No data collection. Not affiliated with Roblox.
+      </p>
+    </div>
+  </header>
 
-  <section class="card">
-    <h2>What is RBXTools?</h2>
-    <p>
-      RBXTools is a collection of <strong>local, open-source utilities</strong>
-      designed to help Roblox users manage their accounts responsibly.
-    </p>
-    <p>
-      All tools run <strong>locally on your computer</strong>.
-      No data is collected, stored, or transmitted.
-    </p>
-  </section>
+  <main class="wrap">
+    <section class="card">
+      <h2>Current Tool: Unfollow Manager</h2>
+      <ul>
+        <li>Unfollows all users you are currently following</li>
+        <li>Runs locally on your machine</li>
+        <li>Logs unfollows to a local file</li>
+        <li>Rate-limit handling built in</li>
+      </ul>
+    </section>
 
-  <section class="card">
-    <h2>Current Tool: Unfollow Manager</h2>
-    <ul>
-      <li>Unfollow users you are following</li>
-      <li>Option to unfollow <strong>non-friends only</strong></li>
-      <li>Optional filter for <strong>offline users</strong></li>
-      <li>Automatic rate-limit handling</li>
-      <li>Generates a local log of unfollowed users</li>
-    </ul>
-  </section>
+    <section class="card warning">
+      <h2>Security Warning</h2>
+      <p>
+        RBXTools uses your Roblox session cookie (<code>.ROBLOSECURITY</code>) to authenticate requests.
+        <strong>Never share it</strong> or paste it into random websites.
+      </p>
+      <ul>
+        <li>✅ Tool runs locally only</li>
+        <li>❌ We do not collect or store cookies</li>
+        <li>✅ After use, log out of Roblox to invalidate the cookie</li>
+      </ul>
+    </section>
 
-  <section class="card warning">
-    <h2>Security Warning</h2>
-    <p>
-      This tool uses your Roblox session cookie (<code>.ROBLOSECURITY</code>)
-      to authenticate requests.
-    </p>
-    <ul>
-      <li>❌ Never share your cookie</li>
-      <li>❌ Never paste it into random websites</li>
-      <li>✅ This tool runs locally only</li>
-    </ul>
-    <p>
-      After use, <strong>log out of Roblox</strong> to invalidate the cookie.
-    </p>
-  </section>
+    <section class="card">
+      <h2>How to use</h2>
+      <ol>
+        <li>Download the EXE from Releases.</li>
+        <li>Run it and follow the prompts.</li>
+        <li>It will generate a local log file of unfollows.</li>
+        <li>Log out of Roblox afterwards for security.</li>
+      </ol>
+    </section>
 
-  <section class="card actions">
-    <a class="button" href="https://github.com/sayrejeri/RBXTools/releases" target="_blank">
-      Download (Windows EXE)
-    </a>
-    <a class="button secondary" href="https://github.com/sayrejeri/RBXTools" target="_blank">
-      View Source Code
-    </a>
-  </section>
+    <section class="card">
+      <h2>Links</h2>
+      <div class="links">
+        <a href="https://github.com/sayrejeri/RBXTools/releases" target="_blank" rel="noreferrer">Releases</a>
+        <a href="https://github.com/sayrejeri/RBXTools/blob/main/README.md" target="_blank" rel="noreferrer">README</a>
+        <a href="https://github.com/sayrejeri/RBXTools/issues" target="_blank" rel="noreferrer">Issues</a>
+      </div>
+    </section>
 
-  <section class="card">
-    <h2>Disclaimer</h2>
-    <p>
-      RBXTools is <strong>not affiliated with Roblox Corporation</strong>.
-      Use at your own risk and in accordance with Roblox’s Terms of Service.
-    </p>
-  </section>
+    <section class="card">
+      <h2>Disclaimer</h2>
+      <p>
+        RBXTools is not affiliated with Roblox Corporation. Use at your own risk and in accordance
+        with Roblox’s Terms of Service.
+      </p>
+    </section>
+  </main>
 
-</main>
-
-<footer>
-  <p>© 2025 RBXTools · Open Source · MIT License</p>
-</footer>
-
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2025 RBXTools · MIT Licensed</span>
+    </div>
+  </footer>
 </body>
 </html>
