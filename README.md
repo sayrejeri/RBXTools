@@ -1,4 +1,7 @@
 # RBXTools
+![Latest Release](https://img.shields.io/github/v/release/sayrejeri/RBXTools)
+![Total Downloads](https://img.shields.io/github/downloads/sayrejeri/RBXTools/total)
+![License](https://img.shields.io/github/license/sayrejeri/RBXTools)
 
 A collection of **local, open-source Roblox utility tools** designed to help users manage their accounts safely and transparently.
 
