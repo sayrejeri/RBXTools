@@ -3,6 +3,15 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# RBXTools output logs
+unfollowed_*.txt
+
+# Compiled executables
+*.exe
+
+# Ignore local config copies
+config.local.*
+
 # C extensions
 *.so
 
