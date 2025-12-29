@@ -2,59 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RBXTools</title>
-  <meta name="description" content="Open-source Roblox account management tools. Runs locally. Download the Windows EXE from GitHub Releases." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Open-source Roblox account management tools." />
   <link rel="stylesheet" href="style.css" />
-  <script defer src="app.js"></script>
-
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧰</text></svg>">
 </head>
-
 <body>
+
   <header class="hero">
-    <div class="wrap">
+    <h1>RBXTools</h1>
+    <p class="subtitle">Open-source Roblox account management tools</p>
 
-      <nav class="nav">
-        <a class="brand" href="./">RBXTools</a>
-        <div class="nav-links">
-          <a href="./tools/">Tools</a>
-          <a href="https://github.com/sayrejeri/RBXTools/releases" target="_blank" rel="noreferrer">Releases</a>
-          <a href="https://github.com/sayrejeri/RBXTools" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </nav>
-
-      <h1>RBXTools</h1>
-      <p class="subtitle">Open-source Roblox account management tools</p>
-
-      <!-- Badges (auto / stats) -->
-      <div class="badge-row" aria-label="Project badges">
-        <img alt="Latest Release" src="https://img.shields.io/github/v/release/sayrejeri/RBXTools?label=release&color=4f8cff" />
-        <img alt="Total Downloads" src="https://img.shields.io/github/downloads/sayrejeri/RBXTools/total?label=downloads&color=4f8cff" />
-        <img alt="License" src="https://img.shields.io/github/license/sayrejeri/RBXTools?label=license&color=4f8cff" />
-      </div>
-
-      <div class="badges">
-        <span class="pill" id="versionPill">Current version: <strong>Loading…</strong></span>
-        <span class="pill muted">Runs locally • No data collection</span>
-      </div>
-
-      <div class="cta">
-        <a class="btn" id="downloadBtn" href="https://github.com/sayrejeri/RBXTools/releases/latest" target="_blank" rel="noreferrer">
-          Download Windows EXE (Latest Release)
-        </a>
-        <a class="btn secondary" href="https://github.com/sayrejeri/RBXTools" target="_blank" rel="noreferrer">
-          View Source
-        </a>
-      </div>
-
-      <p class="small">
-        Not affiliated with Roblox. Use responsibly and at your own risk.
-      </p>
+    <div class="hero-buttons">
+      <a class="primary-btn" href="https://github.com/sayrejeri/RBXTools/releases/latest">Download Windows EXE</a>
+      <a class="secondary-btn" href="https://github.com/sayrejeri/RBXTools">View Source</a>
     </div>
+
+    <p class="hero-note">
+      Runs locally on your PC. No data collection. Not affiliated with Roblox.
+    </p>
   </header>
 
-  <main class="wrap">
+  <main class="container">
+
     <section class="card">
       <h2>Current Tool: Unfollow Manager</h2>
       <ul>
@@ -63,77 +33,98 @@
         <li>Logs unfollows to a local file</li>
         <li>Rate-limit handling built in</li>
       </ul>
-      <p class="muted small">
-        See all tools on the <a class="inline-link" href="./tools/">Tools page</a>.
-      </p>
     </section>
 
     <section class="card warning">
       <h2>Security Warning</h2>
       <p>
-        RBXTools uses your Roblox session cookie (<code>.ROBLOSECURITY</code>) to authenticate requests.
-        <strong>Never share it</strong> or paste it into random websites.
+        RBXTools uses your Roblox session cookie
+        (<code>.ROBLOSECURITY</code>) to authenticate requests.
+        <strong>Never share it or paste it into random websites.</strong>
       </p>
-      <p class="muted">
-        Your cookie is used only on your computer by this tool and is never sent anywhere except to Roblox endpoints.
-      </p>
-      <ul class="checks">
-        <li><span class="ok">✅</span> Tool runs locally only</li>
-        <li><span class="no">❌</span> We do not collect or store cookies</li>
-        <li><span class="ok">✅</span> After use, log out of Roblox to invalidate the cookie</li>
+      <ul>
+        <li>✅ Tool runs locally only</li>
+        <li>❌ We do not collect or store cookies</li>
+        <li>✅ Log out of Roblox after use to invalidate the cookie</li>
       </ul>
     </section>
 
     <section class="card">
       <h2>How to use</h2>
       <ol>
-        <li>Download the EXE from GitHub Releases.</li>
-        <li>Run it and follow the prompts.</li>
-        <li>It will generate a local log file of unfollows.</li>
-        <li>Log out of Roblox afterwards for security.</li>
+        <li>Download the EXE from Releases</li>
+        <li>Run it and follow the prompts</li>
+        <li>A local log file will be generated</li>
+        <li>Log out of Roblox afterwards</li>
       </ol>
-
-      <div class="tip">
-        <strong>Tip:</strong> If Windows SmartScreen shows a warning, click
-        <em>More info</em> → <em>Run anyway</em>.
-        (Common for new unsigned apps.)
-      </div>
-    </section>
-
-    <!-- Changelog (auto-populated from latest release) -->
-    <section class="card">
-      <h2>Changelog</h2>
-      <p class="muted" id="releaseMeta">Loading latest release…</p>
-      <div class="release-notes" id="releaseNotes">
-        <p class="muted">Loading…</p>
-      </div>
-      <p class="small muted">
-        Full history on <a class="inline-link" href="https://github.com/sayrejeri/RBXTools/releases" target="_blank" rel="noreferrer">Releases</a>.
-      </p>
     </section>
 
     <section class="card">
       <h2>Links</h2>
       <div class="links">
-        <a href="https://github.com/sayrejeri/RBXTools/releases" target="_blank" rel="noreferrer">Releases</a>
-        <a href="https://github.com/sayrejeri/RBXTools/blob/main/README.md" target="_blank" rel="noreferrer">README</a>
-        <a href="https://github.com/sayrejeri/RBXTools/issues" target="_blank" rel="noreferrer">Issues</a>
+        <a href="https://github.com/sayrejeri/RBXTools/releases">Releases</a>
+        <a href="https://github.com/sayrejeri/RBXTools#readme">README</a>
+        <a href="https://github.com/sayrejeri/RBXTools/issues">Issues</a>
       </div>
+    </section>
+
+    <section class="card">
+      <h2>Creator</h2>
+      <p class="muted">Built and maintained by <strong>sayrejeri</strong></p>
+
+      <div class="social-buttons">
+        <a class="social-btn" href="https://www.roblox.com/users/38753766/profile" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Roblox_Logo_2022.svg" alt="Roblox">
+          Roblox
+        </a>
+
+        <a class="social-btn" href="#" onclick="navigator.clipboard.writeText('sayrejeri'); alert('Discord username copied!'); return false;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord">
+          Discord: sayrejeri
+        </a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Support</h2>
+      <p class="muted">If RBXTools helped you, consider supporting the project.</p>
+
+      <a href="https://www.buymeacoffee.com/sayrejeri" target="_blank">
+        <img
+          src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee%20%3A)&emoji=%E2%98%95&slug=sayrejeri&button_colour=5F7FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00"
+          alt="Buy me a coffee"
+          class="bmc-image"
+        />
+      </a>
     </section>
 
     <section class="card">
       <h2>Disclaimer</h2>
       <p>
-        RBXTools is not affiliated with Roblox Corporation. Use at your own risk and in accordance with Roblox’s Terms of Service.
+        RBXTools is not affiliated with Roblox Corporation.
+        Use at your own risk and in accordance with Roblox’s Terms of Service.
       </p>
     </section>
+
   </main>
 
-  <footer class="footer">
-    <div class="wrap footer-row">
-      <span>© 2025 RBXTools · MIT Licensed</span>
-      <span class="muted">Not affiliated with Roblox</span>
-    </div>
+  <footer>
+    © 2025 RBXTools · MIT Licensed
   </footer>
+
+  <!-- Buy Me a Coffee Floating Widget -->
+  <script
+    data-name="BMC-Widget"
+    data-cfasync="false"
+    src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+    data-id="sayrejeri"
+    data-description="Support me on Buy me a coffee!"
+    data-message="Thank you for checking us out!"
+    data-color="#5F7FFF"
+    data-position="Right"
+    data-x_margin="18"
+    data-y_margin="18">
+  </script>
+
 </body>
 </html>
