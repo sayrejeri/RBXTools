@@ -2,17 +2,14 @@ import time
 from datetime import datetime
 import requests
 
-print("RBXTools – Roblox Unfollow Manager")
-print("----------------------------------")
-print("This tool runs locally. Never share your .ROBLOSECURITY cookie.\n")
+print("RBXTools – Roblox Unfollow Tool")
+print("--------------------------------")
+print("This tool unfollows ALL users you are following.")
+print("Runs locally. Never share your .ROBLOSECURITY cookie.\n")
 
 # ===== USER INPUT =====
 roblox_id = int(input("Enter your Roblox User ID: ").strip())
 cookie = input("Paste your .ROBLOSECURITY cookie: ").strip()
-
-unfollow_non_friends_only = input("Unfollow non-friends only? (y/n): ").lower().startswith("y")
-unfollow_offline_only = input("Unfollow offline users only? (y/n): ").lower().startswith("y")
-
 DELAY_SECONDS = 0.25
 # ======================
 
@@ -40,34 +37,12 @@ def get_followings(cursor=None):
     params = {"sortOrder": "Asc", "limit": 100}
     if cursor:
         params["cursor"] = cursor
-    r = session.get(f"https://friends.roblox.com/v1/users/{roblox_id}/followings", params=params)
+    r = session.get(
+        f"https://friends.roblox.com/v1/users/{roblox_id}/followings",
+        params=params
+    )
     r.raise_for_status()
     return r.json()
-
-def get_friend_statuses(user_ids):
-    if not user_ids:
-        return {}
-    r = session.post(
-        f"https://friends.roblox.com/v1/users/{roblox_id}/friends/statuses",
-        json={"userIds": user_ids}
-    )
-    return {x["id"]: x["isFriend"] for x in r.json().get("data", [])}
-
-def get_presence_statuses(user_ids):
-    if not user_ids:
-        return {}
-    r = session.post(
-        "https://presence.roblox.com/v1/presence/users",
-        json={"userIds": user_ids}
-    )
-    return {x["userId"]: x["userPresenceType"] for x in r.json().get("userPresences", [])}
-
-def get_usernames(user_ids):
-    r = session.post(
-        "https://users.roblox.com/v1/users",
-        json={"userIds": user_ids, "excludeBannedUsers": False}
-    )
-    return {u["id"]: u["name"] for u in r.json().get("data", [])}
 
 def unfollow(user_id):
     r = session.post(f"https://friends.roblox.com/v1/users/{user_id}/unfollow")
@@ -90,24 +65,13 @@ try:
         if not users:
             break
 
-        ids = [u["id"] for u in users]
-        names = get_usernames(ids)
-        friend_map = get_friend_statuses(ids) if unfollow_non_friends_only else {}
-        presence_map = get_presence_statuses(ids) if unfollow_offline_only else {}
-
-        for uid in ids:
-            if unfollow_non_friends_only and friend_map.get(uid):
-                continue
-
-            if unfollow_offline_only and presence_map.get(uid) != 0:
-                continue
-
+        for u in users:
+            uid = u["id"]
             status = unfollow(uid)
-            name = names.get(uid, str(uid))
 
             if status in (200, 204):
-                print(f"Unfollowed: {name} ({uid})")
-                log_file.write(f"{uid}\t{name}\n")
+                print(f"Unfollowed user ID: {uid}")
+                log_file.write(f"{uid}\n")
                 log_file.flush()
             elif status == 429:
                 print("Rate limited. Sleeping 10 seconds...")
