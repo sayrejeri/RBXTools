@@ -57,3 +57,67 @@ After using the tool, it is recommended that you **log out of Roblox** in your b
 2. Install dependencies:
    ```bash
    pip install requests
+3. Run:
+
+   ```bash
+   python unfollow.py
+   ```
+
+---
+
+## 📄 Output Files
+
+Each run creates a log file in the same folder:
+
+```
+unfollowed_<robloxId>_YYYYMMDD_HHMMSS.txt
+```
+
+Format:
+
+```
+USER_ID    USERNAME
+```
+
+---
+
+## ❗ Disclaimer
+
+This project is **not affiliated with Roblox Corporation**.
+
+Use of this tool is at your own risk.
+You are responsible for complying with Roblox’s Terms of Service.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+You are free to use, modify, and distribute it, but **without warranty**.
+
+---
+
+## 🤝 Contributing
+
+Pull requests and improvements are welcome.
+
+If you have ideas for:
+
+* additional filters
+* better UI
+* performance improvements
+* new Roblox tools
+
+Feel free to open an issue or PR.
+
+---
+
+## ⭐ Acknowledgments
+
+Built for educational and personal account-management purposes.
+
+If you find this useful, consider starring the repo ⭐
+
+```
+
+---
