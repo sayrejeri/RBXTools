@@ -6,24 +6,41 @@
   <title>RBXTools</title>
   <meta name="description" content="Open-source Roblox account management tools. Runs locally. Download the Windows EXE from GitHub Releases." />
   <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
 
-  <!-- Simple favicon (emoji) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧰</text></svg>">
 </head>
 
 <body>
   <header class="hero">
     <div class="wrap">
+
+      <nav class="nav">
+        <a class="brand" href="./">RBXTools</a>
+        <div class="nav-links">
+          <a href="./tools/">Tools</a>
+          <a href="https://github.com/sayrejeri/RBXTools/releases" target="_blank" rel="noreferrer">Releases</a>
+          <a href="https://github.com/sayrejeri/RBXTools" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </nav>
+
       <h1>RBXTools</h1>
       <p class="subtitle">Open-source Roblox account management tools</p>
 
+      <!-- Badges (auto / stats) -->
+      <div class="badge-row" aria-label="Project badges">
+        <img alt="Latest Release" src="https://img.shields.io/github/v/release/sayrejeri/RBXTools?label=release&color=4f8cff" />
+        <img alt="Total Downloads" src="https://img.shields.io/github/downloads/sayrejeri/RBXTools/total?label=downloads&color=4f8cff" />
+        <img alt="License" src="https://img.shields.io/github/license/sayrejeri/RBXTools?label=license&color=4f8cff" />
+      </div>
+
       <div class="badges">
-        <span class="pill">Current version: <strong>v1.0.0</strong></span>
+        <span class="pill" id="versionPill">Current version: <strong>Loading…</strong></span>
         <span class="pill muted">Runs locally • No data collection</span>
       </div>
 
       <div class="cta">
-        <a class="btn" href="https://github.com/sayrejeri/RBXTools/releases/latest" target="_blank" rel="noreferrer">
+        <a class="btn" id="downloadBtn" href="https://github.com/sayrejeri/RBXTools/releases/latest" target="_blank" rel="noreferrer">
           Download Windows EXE (Latest Release)
         </a>
         <a class="btn secondary" href="https://github.com/sayrejeri/RBXTools" target="_blank" rel="noreferrer">
@@ -46,6 +63,9 @@
         <li>Logs unfollows to a local file</li>
         <li>Rate-limit handling built in</li>
       </ul>
+      <p class="muted small">
+        See all tools on the <a class="inline-link" href="./tools/">Tools page</a>.
+      </p>
     </section>
 
     <section class="card warning">
@@ -76,21 +96,20 @@
       <div class="tip">
         <strong>Tip:</strong> If Windows SmartScreen shows a warning, click
         <em>More info</em> → <em>Run anyway</em>.
-        (This is common for new unsigned apps.)
+        (Common for new unsigned apps.)
       </div>
     </section>
 
+    <!-- Changelog (auto-populated from latest release) -->
     <section class="card">
-      <h2>FAQ</h2>
-
-      <p><strong>Does this run on Mac or Linux?</strong><br />
-        The downloadable EXE is for Windows. Advanced users can run the Python script from source.</p>
-
-      <p><strong>Why do I need a cookie?</strong><br />
-        Roblox requires authentication to unfollow accounts. The cookie is how the tool proves it’s you, using your logged-in browser session.</p>
-
-      <p><strong>Will this get my account banned?</strong><br />
-        There’s always some risk when automating actions. This tool uses delays and rate-limit handling, but you should use it responsibly.</p>
+      <h2>Changelog</h2>
+      <p class="muted" id="releaseMeta">Loading latest release…</p>
+      <div class="release-notes" id="releaseNotes">
+        <p class="muted">Loading…</p>
+      </div>
+      <p class="small muted">
+        Full history on <a class="inline-link" href="https://github.com/sayrejeri/RBXTools/releases" target="_blank" rel="noreferrer">Releases</a>.
+      </p>
     </section>
 
     <section class="card">
