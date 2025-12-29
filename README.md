@@ -11,9 +11,9 @@ A collection of **local, open-source Roblox utility tools** designed to help use
 
 ### Roblox Unfollow Tool
 - Unfollow users you are following
-- Optional filters:
-  - Unfollow **non-friends only**
-  - Unfollow **offline users only**
+- Optional filters: 
+  - Unfollow **non-friends only** (NOT YET ADDED)
+  - Unfollow **offline users only** (NOT YET ADDED)
 - Automatic rate-limit handling
 - Generates a **log file** of all unfollowed users
 - Can be stopped and resumed safely
